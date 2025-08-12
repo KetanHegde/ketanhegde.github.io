@@ -315,7 +315,7 @@ function getFormattedDateTime() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const response = await fetch("./data.json");
+  const response = await fetch("../data/data.json");
   const jsonData = await response.json();
   current = buildTreeFromJson(jsonData);
   currentPath = buildPath(current);
