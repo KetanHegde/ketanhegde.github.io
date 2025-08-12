@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KetanHede - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./images/icon.png" type="image/x-icon" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="side-bar-container">
+        <div class="side-bar">
+          <button title="terminal" class="terminal-icon-button">
+            <img
+              style="width: 45px; height: auto"
+              src="./images/terminal.png"
+              alt="terminal"
+            />
+            <div class="terminal-dot"></div>
+          </button>
+        </div>
+      </div>
+      <div class="shell-outer-container">
+        <div class="title-bar" id="movable-box">
+          <div class="title-div"><p class="title" id="title">title</p></div>
+          <div class="buttons-container">
+            <div class="window-buttons-container">
+              <button class="minimize-button window-button">
+                <div
+                  class="window-button-icons"
+                  style="position: absolute; bottom: 5px"
+                >
+                  <div>
+                    <div
+                      style="width: 6px; border-top: 0.7px solid white"
+                    ></div>
+                  </div>
+                </div>
+              </button>
+              <button class="restore-button window-button" id="restore-button">
+                <!-- <div
+                    style="width: 4.5px; height: 4.5px; border: 1px solid white"
+                  ></div> -->
+                <div class="window-button-icons">
+                  <div class="restore-icon">
+                    <div class="back-box"></div>
+                    <div class="front-box"></div>
+                    <div class="single-box"></div>
+                  </div>
+                </div>
+              </button>
+              <button class="close-button window-button" id="close-button">
+                <div class="window-button-icons">
+                  <div class="close-icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shell-border">
+          <div class="shell-inner-container" id="shell">
+            <div>
+              <p
+                style="
+                  color: white;
+                  margin-top: 5px;
+                  margin-bottom: 0px;
+                  font-size: 85%;
+                  text-align: center;
+                "
+              >
+                Welcome to my
+              </p>
+              <pre
+                style="
+                  color: white;
+                  font-size: 10px;
+                  text-align: center;
+                  margin-top: 0px;
+                  font-weight: bold;
+                  letter-spacing: 0.5px;
+                "
+              >
+ ______   ______    ______    ______   ______   ______    __        __    ______    
+/\  == \ /\  __ \  /\  == \  /\__  _\ /\  ___\ /\  __ \  /\ \      /\ \  /\  __ \   
+\ \  _-/ \ \ \/\ \ \ \  __<  \/_/\ \/ \ \  __\ \ \ \/\ \ \ \ \____ \ \ \ \ \ \/\ \  
+ \ \_\    \ \_____\ \ \_\ \_\   \ \_\  \ \_\    \ \_____\ \ \_____\ \ \_\ \ \_____\ 
+ \/_/     \/_____/  \/_/ /_/    \/_/   \/_/     \/_____/  \/_____/  \/_/  \/_____/
+      </pre
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

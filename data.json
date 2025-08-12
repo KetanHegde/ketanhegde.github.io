@@ -1,0 +1,58 @@
+{
+  "name": "Portfolio",
+  "isDirectory": true,
+  "children": [
+    {
+      "name": "about.txt",
+      "isDirectory": false,
+      "content": "I am Ketan S Hegde, a passionate software developer specializing in full-stack web and mobile application development. I thrive on building scalable, user-centered solutions using modern technologies. I have experience in web, mobile, and AI-based systems and enjoy solving challenging problems with creative approaches."
+    },
+    {
+      "name": "experiences",
+      "isDirectory": true,
+      "children": [
+        {
+          "name": "vitals7.txt",
+          "isDirectory": false,
+          "content": "Software Development Intern | Vitals7, Inc. | May 2025 – Present\n- Developed UI for healthcare web/mobile applications using ReactJS & React Native.\n- Implemented responsive components aligned with healthcare UX standards.\n- Built REST APIs using FastAPI and integrated into the frontend."
+        },
+        {
+          "name": "phntech.txt",
+          "isDirectory": false,
+          "content": "Web Development Intern | PHN Technology Pvt. Ltd. | Apr 2023 – Jun 2023\n- Built static websites using HTML, CSS, and JavaScript.\n- Added interactivity and ensured responsiveness with Bootstrap."
+        }
+      ]
+    },
+    {
+      "name": "projects",
+      "isDirectory": true,
+      "children": [
+        {
+          "name": "taskgpt.txt",
+          "isDirectory": false,
+          "content": "taskGPT - AI CLI Agent | Python, Gemini API, Docker, VS Code Extension | Apr 2025\n- Built cross-platform CLI tool for AI agents with auto-setup and persistent config.\n- Released on PyPI & GitHub with Dockerized one-line deployment.\n- Created VS Code extension for in-editor usage."
+        },
+        {
+          "name": "assessment_system.txt",
+          "isDirectory": false,
+          "content": "Intelligent Assessment & Evaluation System | MERN Stack | Dec 2024\n- Full-stack assessment platform with group creation, student management, and file uploads.\n- Integrated Gemini API for question generation and grading."
+        },
+        {
+          "name": "music_recommender.txt",
+          "isDirectory": false,
+          "content": "Emotion-Based Music Recommendation System | Flask, BERT | Aug 2024\n- AI-driven music recommender analyzing text emotions using BERT.\n- Implemented content-based filtering for personalized suggestions."
+        },
+        {
+          "name": "library_system.txt",
+          "isDirectory": false,
+          "content": "Library Management System | Django, MySQL | Jun 2024\n- Managed book issuing, returns, and inventory.\n- Added librarian controls and automated email notifications."
+        }
+      ]
+    },
+    {
+      "name": "skills.txt",
+      "isDirectory": false,
+      "content": "Languages: C, C++, JavaScript, TypeScript, Python, Java, SQL\nFrontend: HTML, CSS, TailwindCSS, Bootstrap, ReactJS, NextJS, AngularJS\nMobile: React Native, Expo, EAS\nFrameworks/Libraries: Django, Flask, ExpressJS, FastAPI\nBackend/Databases: Node.js, MongoDB, MySQL, NeoDB\nTools & IDEs: VS Code, Eclipse, Jupyter Notebook, MySQL Workbench, Postman, Selenium\nPlatforms: Linux, Git, GitHub, Docker, Firebase, Google OAuth\nPackage Managers: npm, pip, Maven, Gradle, Bun"
+    }
+  ]
+}
