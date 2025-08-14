@@ -371,3 +371,32 @@ input.command:focus {
     opacity: 0;
   }
 }
+
+@media only screen and (max-width: 960px) {
+  .shell-outer-container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .shell-border {
+    min-height: 100vh !important;
+  }
+
+  .restore-button {
+    display: none;
+  }
+
+  .portfolio {
+    font-size: 1.5vw !important;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  * {
+    font-size: 12px !important;
+  }
+
+  .title {
+    font-size: 2.2vw !important;
+  }
+}
