@@ -80,6 +80,9 @@ function newPrompt() {
   input.autocomplete = "off";
   input.id = "command";
   input.style.letterSpacing = "0.3px";
+  input.autocapitalize = "none";
+  input.autocorrect = "off";
+  input.spellcheck = false;
 
   const cursor = document.createElement("div");
   cursor.id = "cursor";
