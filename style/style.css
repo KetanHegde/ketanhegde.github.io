@@ -389,6 +389,15 @@ input.command:focus {
   .portfolio {
     font-size: 1.5vw !important;
   }
+
+  .side-bar {
+    height: fit-content;
+  }
+
+  .side-bar-container {
+    align-items: start;
+    margin-top: 5vh;
+  }
 }
 
 @media only screen and (max-width: 560px) {
