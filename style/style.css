@@ -25,14 +25,14 @@ body {
 .side-bar-container {
   height: 100%;
   position: absolute;
-  left: 20px;
+  left: 30px;
   display: flex;
-  align-items: center;
+  align-items: start;
+  top: 30px;
   justify-content: center;
 }
 
 .side-bar {
-  height: 90vh;
   background-color: rgba(5, 5, 5, 0.55);
   border-radius: 14px;
 }
