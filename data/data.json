@@ -45,7 +45,7 @@
         {
           "name": "library_system.txt",
           "isDirectory": false,
-          "content": "Library Management System | Django, MySQL | Jun 2024\n- Managed book issuing, returns, and inventory.\n- Added librarian controls and automated email notifications."
+          "content": "Library Management System | Django, MySQL | Jun 2024\n- Managed book issuing, returns, and inventory.\n- Added librarian controls and automated email notifications. \n link : <a target='_blank' href='https://github.com/KetanHegde/chatbot'>https://github.com/KetanHegde/chatbot</a>"
         }
       ]
     },

@@ -36,7 +36,7 @@ function moveCursorLR(value) {
   measurer.textContent = value || "\u200b";
   document.body.appendChild(measurer);
 
-  cursor.style.left = measurer.getBoundingClientRect().width + "px";
+  cursor.style.left = measurer.getBoundingClientRect().width * 1.04205 + "px";
   measurer.remove();
 }
 
@@ -83,6 +83,7 @@ function newPrompt() {
   input.autocapitalize = "none";
   input.autocorrect = "off";
   input.spellcheck = false;
+  input.maxLength = 50;
 
   const cursor = document.createElement("div");
   cursor.id = "cursor";
@@ -250,7 +251,7 @@ function decodeCommand(inputValue) {
   const shell = document.getElementById("shell");
   const output = document.createElement("p");
   output.id = "output";
-  output.textContent = printText;
+  output.innerHTML = printText;
   output.style.whiteSpace = "pre";
   output.style.textWrap = "wrap";
   output.style.overflowWrap = "break-word";
