@@ -18,6 +18,8 @@ var currentPath = buildPath(current);
 var prevCommands = [];
 var last = 0;
 
+var isBot = false;
+
 var inputValue = 0;
 
 var terminalShown = true;
@@ -44,8 +46,24 @@ function setTitle(text) {
   titleElem.textContent = text;
 }
 
+function printAnswer(printText) {
+  const shell = document.getElementById("shell");
+  const output = document.createElement("p");
+  output.id = "output";
+  output.innerHTML = printText;
+  output.style.whiteSpace = "pre";
+  output.style.textWrap = "wrap";
+  output.style.overflowWrap = "break-word";
+  output.style.textAlign = "justify";
+  shell.append(output);
+}
+
+function scrollToEnd() {
+  const shell = document.getElementById("shell");
+  shell.scrollTop = shell.scrollHeight;
+}
+
 function newPrompt() {
-  setTitle(basePath + separator + "~/" + currentPath);
   currentPath = buildPath(current);
 
   const shell = document.getElementById("shell");
@@ -56,79 +74,131 @@ function newPrompt() {
   const pathDiv = document.createElement("div");
   pathDiv.className = "pathDiv";
 
-  const basePathElem = document.createElement("p");
-  basePathElem.textContent = basePath;
-  const separatorElem = document.createElement("p");
-  separatorElem.textContent = separator;
-  const directoryPathElem = document.createElement("p");
-  directoryPathElem.textContent = "~/" + currentPath;
-  const dollarElem = document.createElement("p");
-  dollarElem.textContent = "$";
-  basePathElem.id = "basePath";
-  separatorElem.id = "separator";
-  directoryPathElem.id = "directoryPath";
-  dollarElem.id = "dollar";
+  if (isBot === false) {
+    setTitle(basePath + separator + "~/" + currentPath);
+    const basePathElem = document.createElement("p");
+    basePathElem.textContent = basePath;
+    const separatorElem = document.createElement("p");
+    separatorElem.textContent = separator;
+    const directoryPathElem = document.createElement("p");
+    directoryPathElem.textContent = "~/" + currentPath;
+    const dollarElem = document.createElement("p");
+    dollarElem.textContent = "$";
+    basePathElem.id = "basePath";
+    separatorElem.id = "separator";
+    directoryPathElem.id = "directoryPath";
+    dollarElem.id = "dollar";
 
-  const cmdBox = document.createElement("div");
-  cmdBox.className = "command-container";
+    const cmdBox = document.createElement("div");
+    cmdBox.className = "command-container";
 
-  const input = document.createElement("input");
-  input.isDirectory = "text";
-  input.className = "command";
-  input.autofocus = true;
-  input.name = "command";
-  input.autocomplete = "off";
-  input.id = "command";
-  input.style.letterSpacing = "0.3px";
-  input.autocapitalize = "none";
-  input.autocorrect = "off";
-  input.spellcheck = false;
-  input.maxLength = 50;
+    const input = document.createElement("input");
+    input.isDirectory = "text";
+    input.className = "command";
+    input.autofocus = true;
+    input.name = "command";
+    input.autocomplete = "off";
+    input.id = "command";
+    input.style.letterSpacing = "0.3px";
+    input.autocapitalize = "none";
+    input.autocorrect = "off";
+    input.spellcheck = false;
+    input.maxLength = 50;
 
-  const cursor = document.createElement("div");
-  cursor.id = "cursor";
-  cursor.innerText = "";
+    const cursor = document.createElement("div");
+    cursor.id = "cursor";
+    cursor.innerText = "";
 
-  pathDiv.append(basePathElem, separatorElem, directoryPathElem, dollarElem);
-  cmdBox.append(input, cursor);
-  wrapper.append(pathDiv, cmdBox);
-  shell.append(wrapper);
-  input.addEventListener("keydown", (e) => {
-    setTimeout(() => {
-      handleKey(e);
-    }, 0);
-  });
+    pathDiv.append(basePathElem, separatorElem, directoryPathElem, dollarElem);
+    cmdBox.append(input, cursor);
+    wrapper.append(pathDiv, cmdBox);
+    shell.append(wrapper);
+    input.addEventListener("keydown", (e) => {
+      setTimeout(() => {
+        handleKey(e);
+      }, 0);
+    });
 
-  input.addEventListener("mousedown", function (e) {
-    e.preventDefault();
-  });
+    input.addEventListener("mousedown", function (e) {
+      e.preventDefault();
+    });
 
-  input.focus();
+    input.focus();
+  } else {
+    setTitle("ketanBot");
+    const pathElem = document.createElement("p");
+    pathElem.textContent = "ketanbot";
+    pathElem.id = "basePath";
+    const dollarElem = document.createElement("p");
+    dollarElem.textContent = "$";
+    dollarElem.id = "dollar";
+    const cmdBox = document.createElement("div");
+    cmdBox.className = "command-container";
+
+    const input = document.createElement("input");
+    input.isDirectory = "text";
+    input.className = "command";
+    input.autofocus = true;
+    input.name = "command";
+    input.autocomplete = "off";
+    input.id = "command";
+    input.style.letterSpacing = "0.3px";
+    input.autocapitalize = "none";
+    input.autocorrect = "off";
+    input.spellcheck = false;
+    input.maxLength = 100;
+
+    const cursor = document.createElement("div");
+    cursor.id = "cursor";
+    cursor.innerText = "";
+
+    pathDiv.append(pathElem, dollarElem);
+    cmdBox.append(input, cursor);
+    wrapper.append(pathDiv, cmdBox);
+
+    shell.append(wrapper);
+    input.addEventListener("keydown", (e) => {
+      setTimeout(() => {
+        handleKey(e);
+      }, 0);
+    });
+
+    input.addEventListener("mousedown", function (e) {
+      e.preventDefault();
+    });
+
+    input.focus();
+  }
 }
 
-function handleKey(e) {
-  const input = e.target;
+function showLoading(shell) {
+  const output = document.createElement("p");
+  output.id = "output";
+  output.style.whiteSpace = "pre";
+  output.style.textWrap = "wrap";
+  output.style.overflowWrap = "break-word";
+  output.style.textAlign = "justify";
+  shell.append(output);
+  scrollToEnd();
+  let dots = 0;
+  setInterval(() => {
+    dots = (dots + 1) % 6;
+    output.textContent = "." + ".".repeat(dots);
+  }, 200);
+}
 
+async function handleKey(e) {
+  const input = e.target;
+  e.preventDefault();
   setTimeout(() => {
     inputValue = input.selectionStart;
     moveCursorLR(input.value.slice(0, inputValue));
   }, 0);
 
-  if (e.key === "Enter") {
+  if (isBot === true && e.ctrlKey && e.key === "c") {
     const value = input.value;
     const cmdBox = input.parentElement;
-
-    if (value !== "") {
-      decodeCommand(value);
-      if (
-        prevCommands.length === 0 ||
-        prevCommands[prevCommands.length - 1] !== value
-      ) {
-        prevCommands.push(value);
-        last = prevCommands.length;
-      }
-    }
-
+    isBot = false;
     const echo = document.createElement("div");
     echo.textContent = value;
     echo.style.display = "inline";
@@ -139,7 +209,69 @@ function handleKey(e) {
     cmdBox.replaceChildren(echo);
     newPrompt();
     setTimeout(() => moveCursorLR(""), 0);
+    e.preventDefault();
+  }
 
+  if (e.key === "Enter") {
+    const value = input.value;
+    const cmdBox = input.parentElement;
+
+    const [cmd] = value.split(" ");
+
+    const echo = document.createElement("div");
+    echo.textContent = value;
+    echo.style.display = "inline";
+    echo.style.whiteSpace = "pre";
+    echo.style.color = "white";
+    echo.style.fontSize = "14px";
+
+    cmdBox.replaceChildren(echo);
+
+    if (isBot === false && cmd === "ketanbot") {
+      isBot = true;
+
+      printAnswer("\nHi there! Welcome to ketanBot.\n\n");
+      printAnswer(
+        "You can ask me about my education, experience, projects, and skills."
+      );
+      printAnswer(
+        "To end the conversation, just say 'bye' or 'tata' to me.\n\n"
+      );
+    } else if (
+      isBot === true &&
+      (cmd === "exit" || cmd === "bye" || cmd === "tata")
+    ) {
+      printAnswer(
+        "It was great talking with you! If you have any more questions later, feel free to reach out. Have a good day!\n\nBye\n\n"
+      );
+
+      isBot = false;
+    } else if (isBot === true) {
+      if (value !== "") {
+        const shell = document.getElementById("shell");
+        showLoading(shell);
+        const response = await getResponse(value);
+        shell.removeChild(shell.lastChild);
+        var answer = response.answer;
+        answer = answer.replace(/\*/g, "");
+        answer += "\n\n";
+        printAnswer(answer);
+      }
+    } else if (isBot === false) {
+      if (value !== "") {
+        decodeCommand(value);
+      }
+    }
+    if (
+      prevCommands.length === 0 ||
+      prevCommands[prevCommands.length - 1] !== value
+    ) {
+      prevCommands.push(value);
+      last = prevCommands.length;
+    }
+
+    newPrompt();
+    setTimeout(() => moveCursorLR(""), 0);
     e.preventDefault();
   } else if (e.key === "ArrowUp") {
     if (last === 0) {
@@ -178,6 +310,10 @@ function decodeCommand(inputValue) {
   let printText = "";
   if (cmd === "echo") {
     if (text) printText = text;
+  } else if (cmd === "help") {
+    printAnswer(
+      "Use\n- ls to see all the files and folders in your current directory.\n- cd followed by a folder name to move into that directory.\n- cat followed by a filename to display the file’s content.\n- pwd to check the full path of where you currently are.\n(You can also use relative pathnames with commands like cd, ls, and cat to navigate)\n\nType `ketanbot` to start chatting with my bot\n\n"
+    );
   } else if (cmd === "ls") {
     if (text && text !== "-a") {
       if (text === "-l") {
@@ -248,16 +384,27 @@ function decodeCommand(inputValue) {
   else if (cmd == "pwd") {
     printText = `/${currentPath}`;
   } else printText = cmd + ": command not found";
-  const shell = document.getElementById("shell");
-  const output = document.createElement("p");
-  output.id = "output";
-  output.innerHTML = printText;
-  output.style.whiteSpace = "pre";
-  output.style.textWrap = "wrap";
-  output.style.overflowWrap = "break-word";
-  output.style.textAlign = "justify";
+  printAnswer(printText);
+}
 
-  shell.append(output);
+async function getResponse(value) {
+  try {
+    const res = await fetch("https://ketanbot.onrender.com/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query: value }),
+    });
+
+    if (!res.ok) {
+      throw new Error("Network response was not ok " + res.statusText);
+    }
+
+    return await res.json();
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 
 function buildPath(directory) {
@@ -323,6 +470,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const jsonData = await response.json();
   current = buildTreeFromJson(jsonData);
   currentPath = buildPath(current);
+  printAnswer(
+    "Type `help` to see available commands or `ketanbot` to start chatting with my bot.\n\n"
+  );
   newPrompt();
 });
 
@@ -390,7 +540,7 @@ if (!restoreBtn || !shell || !titleBar || !mainContainer) {
       prevState.innerBR || "10px";
     shellBorder.style.borderBottomLeftRadius = prevState.borderBL || "10px";
     shellBorder.style.borderBottomRightRadius = prevState.borderBR || "10px";
-    shellBorder.style.maxHeight = prevState.borderMaxH || "60vh";
+    shellBorder.style.maxHeight = prevState.borderMaxH || "70vh";
 
     singleBox.style.display = prevState.singleDisplay || "block";
     backBox.style.display = prevState.backDisplay || "none";
@@ -539,6 +689,10 @@ document.querySelector(".close-button").addEventListener("click", function (e) {
     document.querySelector(".terminal-dot").style.display = "none";
     document.querySelector(".terminal-icon-button").style.backgroundColor =
       "transparent";
+    isBot = false;
+    printAnswer(
+      "Welcome to my portfolio\n\nType `help` to see available commands or `ketanbot` to start chatting with my bot\n\n"
+    );
     newPrompt();
   }
 });
