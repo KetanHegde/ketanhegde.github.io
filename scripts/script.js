@@ -230,7 +230,7 @@ async function handleKey(e) {
     if (isBot === false && cmd === "ketanbot") {
       isBot = true;
 
-      printAnswer("\nHi there! Welcome to ketanBot.\n\n");
+      printAnswer("\nHi there! I am ketanBot.\n\n");
       printAnswer(
         "You can ask me about my education, experience, projects, and skills."
       );
