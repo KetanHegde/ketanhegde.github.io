@@ -5,21 +5,26 @@
     {
       "name": "about.txt",
       "isDirectory": false,
-      "content": "I am Ketan S Hegde, a passionate software developer specializing in full-stack web and mobile application development. I thrive on building scalable, user-centered solutions using modern technologies. I have experience in web, mobile, and AI-based systems and enjoy solving challenging problems with creative approaches."
+      "content": "I am Ketan Hegde, a full-stack developer with a strong focus on backend systems, cloud infrastructure, and DevOps practices. I specialize in building scalable APIs and GenAI applications (RAG systems) using Python and FastAPI. I have hands-on experience in cloud deployment, system design, and developing reliable, production-ready applications."
     },
     {
       "name": "experiences",
       "isDirectory": true,
       "children": [
         {
+          "name": "hitachi.txt",
+          "isDirectory": false,
+          "content": "Graduate Engineer Trainee (Intern) | Hitachi Digital Services | Feb 2026 – Present\n- Developed an Incident Monitoring System to track and manage alerts and system events.\n- Implemented real-time monitoring, logging, and alert workflows.\n- Completed structured AWS cloud training via AWS Skill Builder."
+        },
+        {
           "name": "vitals7.txt",
           "isDirectory": false,
-          "content": "Software Development Intern | Vitals7, Inc. | May 2025 – Present\n- Developed UI for healthcare web/mobile applications using ReactJS & React Native.\n- Implemented responsive components aligned with healthcare UX standards.\n- Built REST APIs using FastAPI and integrated into the frontend."
+          "content": "Software Development Intern | Vitals7, Inc. | May 2025 – Jan 2026\n- Built backend services using FastAPI with modular REST APIs.\n- Integrated AWS Cognito & Amplify for authentication and authorization.\n- Developed reusable UI components using ReactJS and React Native.\n- Collaborated with domain experts to translate clinical workflows into production features."
         },
         {
           "name": "phntech.txt",
           "isDirectory": false,
-          "content": "Web Development Intern | PHN Technology Pvt. Ltd. | Apr 2023 – Jun 2023\n- Built static websites using HTML, CSS, and JavaScript.\n- Added interactivity and ensured responsiveness with Bootstrap."
+          "content": "Web Development Intern | PHN Technology Pvt. Ltd. | Apr 2023 – Jun 2023\n- Built responsive static websites using HTML, CSS, JavaScript, and Bootstrap.\n- Improved UI/UX across multiple devices."
         }
       ]
     },
@@ -28,31 +33,46 @@
       "isDirectory": true,
       "children": [
         {
+          "name": "smartrevise.txt",
+          "isDirectory": false,
+          "content": "SmartRevise - RAG Document Intelligence Engine | FastAPI, Pinecone, React, GCP | Nov 2025\n- Built a RAG-based system for semantic search across PDFs.\n- Implemented citation tracking linking responses to exact document sections.\n- Deployed backend on Google Cloud Run and frontend on Netlify."
+        },
+        {
           "name": "taskgpt.txt",
           "isDirectory": false,
-          "content": "taskGPT - AI CLI Agent | Python, Gemini API, Docker, VS Code Extension | Apr 2025\n- Built cross-platform CLI tool for AI agents with auto-setup and persistent config.\n- Released on PyPI & GitHub with Dockerized one-line deployment.\n- Created VS Code extension for in-editor usage."
+          "content": "taskGPT - AI Agent CLI Tool | Python, PyPI, Docker, OpenAI/Gemini APIs | Apr 2025\n- Developed and published a CLI tool for workflow automation.\n- Implemented cross-platform config and secure credential handling.\n- Dockerized for reproducible environments."
         },
         {
           "name": "assessment_system.txt",
           "isDirectory": false,
-          "content": "Intelligent Assessment & Evaluation System | MERN Stack | Dec 2024\n- Full-stack assessment platform with group creation, student management, and file uploads.\n- Integrated Gemini API for question generation and grading."
-        },
-        {
-          "name": "music_recommender.txt",
-          "isDirectory": false,
-          "content": "Emotion-Based Music Recommendation System | Flask, BERT | Aug 2024\n- AI-driven music recommender analyzing text emotions using BERT.\n- Implemented content-based filtering for personalized suggestions."
-        },
-        {
-          "name": "library_system.txt",
-          "isDirectory": false,
-          "content": "Library Management System | Django, MySQL | Jun 2024\n- Managed book issuing, returns, and inventory.\n- Added librarian controls and automated email notifications. \n link : <a target='_blank' href='https://github.com/KetanHegde/chatbot'>https://github.com/KetanHegde/chatbot</a>"
+          "content": "Intelligent Assessment System | MERN Stack, Gemini API | Dec 2024\n- Built scalable assessment platform with real-time dashboards.\n- Integrated AI-based grading and feedback using Gemini API."
         }
       ]
     },
     {
       "name": "skills.txt",
       "isDirectory": false,
-      "content": "Languages: C, C++, JavaScript, TypeScript, Python, Java, SQL\nFrontend: HTML, CSS, TailwindCSS, Bootstrap, ReactJS, NextJS, AngularJS\nMobile: React Native, Expo, EAS\nFrameworks/Libraries: Django, Flask, ExpressJS, FastAPI\nBackend/Databases: Node.js, MongoDB, MySQL, NeoDB\nTools & IDEs: VS Code, Eclipse, Jupyter Notebook, MySQL Workbench, Postman, Selenium\nPlatforms: Linux, Git, GitHub, Docker, Firebase, Google OAuth\nPackage Managers: npm, pip, Maven, Gradle, Bun"
+      "content": "Languages: C++, Python, JavaScript, SQL\nCore Concepts: Data Structures & Algorithms, OOP, DBMS, Operating Systems\nBackend & Cloud: FastAPI, Node.js, LangChain, Docker, Kubernetes, AWS, GCP\nDatabases: MySQL, MongoDB, DynamoDB, Pinecone (Vector DB)"
+    },
+    {
+      "name": "education.txt",
+      "isDirectory": false,
+      "content": "Bachelor of Engineering in Information Science | Acharya Institute of Technology, Bengaluru | 2021 – 2025\nCGPA: 9.54\nCoursework: Data Structures, OOP, DBMS, OS, Software Engineering"
+    },
+    {
+      "name": "achievements.txt",
+      "isDirectory": false,
+      "content": "GATE 2026 – AIR 12,126 (Top ~6%)"
+    },
+    {
+      "name": "certifications.txt",
+      "isDirectory": false,
+      "content": "AWS Skill Builder – Cloud Practitioner Essentials\nAWS Cloud Quest – Cloud Practitioner Badge"
+    },
+    {
+      "name": "leadership.txt",
+      "isDirectory": false,
+      "content": "Resource Person – Git & GitHub Workshop, AIT Bengaluru (Jan 2024)\nTeam Lead – Internal Smart India Hackathon (Qualified), AIT Bengaluru (Sep 2023)"
     }
   ]
 }
