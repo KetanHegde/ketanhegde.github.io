@@ -5,7 +5,7 @@
     {
       "name": "about.txt",
       "isDirectory": false,
-      "content": "I am Ketan Hegde, a full-stack developer with a strong focus on backend systems, cloud infrastructure, and DevOps practices. I specialize in building scalable APIs and GenAI applications (RAG systems) using Python and FastAPI. I have hands-on experience in cloud deployment, system design, and developing reliable, production-ready applications."
+      "content": "Cloud-native backend engineer focused on building scalable, reliable services with Python, FastAPI, Docker, Redis, AWS, and GCP. Experienced in designing REST APIs, caching strategies, CI/CD pipelines, and cloud deployment workflows."
     },
     {
       "name": "experiences",
@@ -14,17 +14,17 @@
         {
           "name": "hitachi.txt",
           "isDirectory": false,
-          "content": "Graduate Engineer Trainee (Intern) | Hitachi Digital Services | Feb 2026 – Present\n- Developed an Incident Monitoring System to track and manage alerts and system events.\n- Implemented real-time monitoring, logging, and alert workflows.\n- Completed structured AWS cloud training via AWS Skill Builder."
+          "content": "Graduate Engineer Trainee (Intern) | Hitachi Digital Services | Feb 2026 – Present\n- Designed, built and deployed an Incident Reporting System on AWS (EC2, RDS, DynamoDB, Lambda, SNS, ALB) with S3-backed artifacts; focused on scalable backend workflows and event-driven processing.\n- Containerized services with Docker, worked with containerized deployments on Kubernetes, and implemented CI/CD pipelines using GitHub Actions for automated build, test, and deploy."
         },
         {
           "name": "vitals7.txt",
           "isDirectory": false,
-          "content": "Software Development Intern | Vitals7, Inc. | May 2025 – Jan 2026\n- Built backend services using FastAPI with modular REST APIs.\n- Integrated AWS Cognito & Amplify for authentication and authorization.\n- Developed reusable UI components using ReactJS and React Native.\n- Collaborated with domain experts to translate clinical workflows into production features."
+          "content": "Software Development Intern | Vitals7, Inc. | May 2025 – Jan 2026\n- Worked on the core healthcare platform, collaborating with domain experts to translate clinical workflows into scalable software features.\n- Designed and implemented backend services using FastAPI, developing modular and maintainable REST APIs for application workflows.\n- Integrated authentication and authorization using AWS Cognito and Amplify for secure user access management.\n- Contributed to frontend integration using React Native and ReactJS components for mobile and web applications."
         },
         {
           "name": "phntech.txt",
           "isDirectory": false,
-          "content": "Web Development Intern | PHN Technology Pvt. Ltd. | Apr 2023 – Jun 2023\n- Built responsive static websites using HTML, CSS, JavaScript, and Bootstrap.\n- Improved UI/UX across multiple devices."
+          "content": "Web Development Intern | PHN Technology Pvt. Ltd. | Apr 2023 – Jun 2023\n- Developed static web applications using HTML, CSS, and JavaScript, implementing modular components and dynamic DOM manipulation.\n- Utilized Bootstrap to engineer responsive, cross-browser layouts, ensuring consistent rendering performance across diverse device viewports."
         }
       ]
     },
@@ -35,44 +35,44 @@
         {
           "name": "smartrevise.txt",
           "isDirectory": false,
-          "content": "SmartRevise - RAG Document Intelligence Engine | FastAPI, Pinecone, React, GCP | Nov 2025\n- Built a RAG-based system for semantic search across PDFs.\n- Implemented citation tracking linking responses to exact document sections.\n- Deployed backend on Google Cloud Run and frontend on Netlify."
+          "content": "SmartRevise - Document Intelligence Engine | FastAPI, Pinecone, Redis, GCP | May 2026\n- Built a scalable RAG-based document intelligence platform enabling semantic search, conversational query answering, and accurate citation tracking across multiple PDFs using FastAPI, Pinecone, Redis, and GCP.\n- Designed a Redis-backed conversational memory layer for the RAG pipeline, reducing MongoDB session-history reads by up to ~99% and improving end-to-end LLM response latency by approximately ~9–14% across varying workload iterations.\n- Implemented automated CI/CD pipelines for backend deployment using Google Cloud Build and Cloud Run, and deployed the frontend on Netlify for streamlined cloud-native delivery."
         },
         {
           "name": "taskgpt.txt",
           "isDirectory": false,
-          "content": "taskGPT - AI Agent CLI Tool | Python, PyPI, Docker, OpenAI/Gemini APIs | Apr 2025\n- Developed and published a CLI tool for workflow automation.\n- Implemented cross-platform config and secure credential handling.\n- Dockerized for reproducible environments."
+          "content": "taskGPT - Python CLI Tool | Python, PyPI, Docker, APIs | Apr 2025\n- Built and published a Python CLI tool on PyPI for running AI agents powered by OpenAI and Gemini models with modular command architecture.\n- Implemented automated first-run setup workflows including dependency installation, API key configuration, and persistent environment-based settings across platforms.\n- Containerized the application with Docker to support isolated, reproducible, and portable execution environments."
         },
         {
           "name": "assessment_system.txt",
           "isDirectory": false,
-          "content": "Intelligent Assessment System | MERN Stack, Gemini API | Dec 2024\n- Built scalable assessment platform with real-time dashboards.\n- Integrated AI-based grading and feedback using Gemini API."
+          "content": "Intelligent Assessment and Evaluation System | Node.js, MongoDB, Gemini | Dec 2024\n- Built a scalable assessment platform using the MERN Stack with real-time dashboards and performance analytics for tracking student progress and evaluation outcomes.\n- Integrated Gemini API-based automated evaluation workflows to generate assessments, evaluate descriptive responses, and provide instant AI-driven feedback to students.\n- Implemented secure online assessment features including full-screen monitoring, tab-switch detection, timed assessments, and automated test submission to improve examination integrity."
         }
       ]
     },
     {
       "name": "skills.txt",
       "isDirectory": false,
-      "content": "Languages: C++, Python, JavaScript, SQL\nCore Concepts: Data Structures & Algorithms, OOP, DBMS, Operating Systems\nBackend & Cloud: FastAPI, Node.js, LangChain, Docker, Kubernetes, AWS, GCP\nDatabases: MySQL, MongoDB, DynamoDB, Pinecone (Vector DB)"
+      "content": "Programming Languages: Python, JavaScript, SQL, C++\nBackend & APIs: FastAPI, REST APIs, Node.js, Authentication (JWT/OAuth, Firebase Auth), API design, rate-limiting\nCloud & DevOps: Docker, Kubernetes (deployment, services), GitHub Actions (CI/CD), AWS (EC2, RDS, Lambda, SNS, DynamoDB), GCP (Cloud Run, Cloud Build)\nDatabases & Caching: MongoDB, MySQL, Redis, DynamoDB\nAI/ML & GenAI: Pinecone, Vector DBs, RAG pipelines (indexing & retrieval)\nCore CS: Data Structures & Algorithms, OOP, DBMS, Operating Systems"
     },
     {
       "name": "education.txt",
       "isDirectory": false,
-      "content": "Bachelor of Engineering in Information Science | Acharya Institute of Technology, Bengaluru | 2021 – 2025\nCGPA: 9.54\nCoursework: Data Structures, OOP, DBMS, OS, Software Engineering"
+      "content": "Bachelor of Engineering in Information Science (CGPA: 9.54) | Acharya Institute of Technology, Bengaluru | 2021 – 2025\nCore Coursework: Data Structures & Algorithms, OOP, Database Management Systems, Software Engineering, Operating Systems."
     },
     {
       "name": "achievements.txt",
       "isDirectory": false,
-      "content": "GATE 2026 – AIR 12,126 (Top ~6%)"
+      "content": "GATE 2026 – AIR 12,126 (Top ~6% among 211,020 candidates)"
     },
     {
       "name": "certifications.txt",
       "isDirectory": false,
-      "content": "AWS Skill Builder – Cloud Practitioner Essentials\nAWS Cloud Quest – Cloud Practitioner Badge"
+      "content": "AWS Cloud Practitioner Essentials – AWS Skill Builder"
     },
     {
       "name": "leadership.txt",
       "isDirectory": false,
-      "content": "Resource Person – Git & GitHub Workshop, AIT Bengaluru (Jan 2024)\nTeam Lead – Internal Smart India Hackathon (Qualified), AIT Bengaluru (Sep 2023)"
+      "content": "Resource Person – Git and GitHub Workshop, AIT Bengaluru (Jan 2024)\nTeam Lead – Internal Smart India Hackathon (Qualified), AIT Bengaluru (Sep 2023)"
     }
   ]
 }
